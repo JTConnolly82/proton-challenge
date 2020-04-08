@@ -73,13 +73,14 @@
 
 .park-header {
   width: 400px;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
 #park-name {
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .park-image {

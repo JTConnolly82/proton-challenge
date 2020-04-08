@@ -26,10 +26,12 @@ const Park = (props) => {
           <h2 id='park-name'>{props.Name}</h2>
           <h4 id='established-date'>Est. {established()}</h4>
         </div>
+        <div style={{height: '1px', backgroundColor: 'lightgrey'}}></div>
         <div className='park-acres-visitors'>
           <span style={{display: 'flex'}}><h3 style={{marginRight: '5px'}}>Acres:</h3><h4>{acreage()}</h4></span>
           <span style={{display: 'flex'}}><h3 style={{marginRight: '5px'}}>Visitors: </h3><h4>{props["Recreation visitors"]}</h4></span>
         </div>
+        {/* <div style={{height: '1px', backgroundColor: 'lightgrey'}}></div> */}
         <h4>{props.Description}</h4>
       </div>
     </div>
