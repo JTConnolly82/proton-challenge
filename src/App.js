@@ -84,12 +84,6 @@ class App extends React.Component {
 
   render() {
 
-    let mappedParksByLocation = this.state.locations.map((location) => {
-      return this.state.parks.filter( park => {
-        return park.Location === location
-      })
-    })
-
     let locations = this.state.locations.map((parkLocation) => {
       let filteredParks = this.state.parks.filter( park => {
         return park.Location === parkLocation
@@ -97,14 +91,10 @@ class App extends React.Component {
       return <Location location={parkLocation} parks={filteredParks} />
     })
 
-
-    console.log(mappedParksByLocation)
-
-
     return (
       <div>
         <div className='app-header'>
-          <h1 style={{marginBottom: '60px', fontSize: '60px'}}>National Parks</h1>
+          <h1 id='title'>National Parks</h1>
           <form>
             <input onChange={this.handleChange} placeholder="search by state" id='input'/>
             <button onClick={this.handleSearch} id='search'>Search</button>

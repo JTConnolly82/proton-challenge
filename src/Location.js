@@ -9,8 +9,8 @@ class Location extends React.Component {
     });
     console.log(this.props.parks);
     return (
-      <div style={{display: 'flex', flexDirection: 'column', marginTop: '15px'}}>
-        <h2 style={{fontSize: '35px', marginLeft: '15px'}}>{this.props.location}</h2>
+      <div className='location-container'>
+        <h2 className='location-title'>{this.props.location}</h2>
         <div className='location-parks-container'>
           {locationParks}
         </div>
