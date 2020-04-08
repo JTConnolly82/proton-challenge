@@ -61,6 +61,7 @@ class App extends React.Component {
     this.setState({
       filterState: ''
     })
+    document.getElementById('input').value = ''
     axios.get('https://prm-interview.s3.amazonaws.com/parks.json')
       .then((res) => {
         let locations = [];
@@ -103,11 +104,11 @@ class App extends React.Component {
     return (
       <div>
         <div className='app-header'>
-          <h1>National Parks</h1>
+          <h1 style={{marginBottom: '60px', fontSize: '60px'}}>National Parks</h1>
           <form>
-            <input onChange={this.handleChange} placeholder="search by state" />
-            <button onClick={this.handleSearch} >Search</button>
-            <button onClick={this.handleReset}>Reset</button>
+            <input onChange={this.handleChange} placeholder="search by state" id='input'/>
+            <button onClick={this.handleSearch} id='search'>Search</button>
+            <button onClick={this.handleReset} id='reset'>Reset</button>
           </form>
           {this.state.errMsg !== '' && <h3>{this.state.errMsg}</h3>}
         </div>
