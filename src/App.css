@@ -2,7 +2,6 @@
 
 * {
   font-family: 'Roboto', sans-serif;
-  font-smooth: auto;
 }
 
 
@@ -64,14 +63,12 @@
 .park-container {
   width: 400px;
   height: 100%;
-  -webkit-box-shadow: 0 1px 1px rgba(101, 101, 101,0.19), 
-  0 2px 2px rgba(101, 101, 101,0.16), 
-  0 4px 4px rgba(101, 101, 101,0.13), 
-  0 8px 8px rgba(101, 101, 101,0.10);
-  box-shadow: 0 1px 1px rgba(101, 101, 101,0.19), 
-  0 2px 2px rgba(101, 101, 101,0.16), 
-  0 4px 4px rgba(101, 101, 101,0.13), 
-  0 8px 8px rgba(101, 101, 101,0.10);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+  0 2px 4px rgba(0,0,0,0.07), 
+  0 4px 8px rgba(116, 116, 116, 0.07),
+  0 8px 16px rgba(116, 116, 116, 0.07),
+  0 16px 32px rgba(116, 116, 116, 0.07);
+  border-radius: 10px;
 }
 
 .park-header {
@@ -80,9 +77,15 @@
   object-fit: cover;
 }
 
+#park-name {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
 .park-image {
   width: 100%;
   height: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
 .park-content {
@@ -92,13 +95,25 @@
 .park-name-est {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
+}
+
+#acres {
+  height: 60px;
+}
+
+#visitors {
+  height: 60px;
 }
 
 .park-acres-visitors {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+#established-date {
+  color: rgb(106, 106, 106);
 }
 
 

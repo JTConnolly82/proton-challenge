@@ -10,6 +10,11 @@ const Park = (props) => {
     return acres;
   }
 
+  let established = () => {
+    let est = props.Established.split(',')[1].trim();
+    return est
+  }
+
 
   return (
     <div className='park-container' >
@@ -18,12 +23,12 @@ const Park = (props) => {
       </div>
       <div className='park-content'>
         <div className='park-name-est'>
-          <h2>{props.Name}</h2>
-          <h4>Est. {props.Established}</h4>
+          <h2 id='park-name'>{props.Name}</h2>
+          <h4 id='established-date'>Est. {established()}</h4>
         </div>
         <div className='park-acres-visitors'>
-          <h4>Acres: {acreage()}</h4>
-          <h4>Annual Visitors: {props["Recreation visitors"]}</h4>
+          <span style={{display: 'flex'}}><h3 style={{marginRight: '5px'}}>Acres:</h3><h4>{acreage()}</h4></span>
+          <span style={{display: 'flex'}}><h3 style={{marginRight: '5px'}}>Visitors: </h3><h4>{props["Recreation visitors"]}</h4></span>
         </div>
         <h4>{props.Description}</h4>
       </div>
